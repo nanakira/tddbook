@@ -88,3 +88,29 @@ TEST(LedDriver, LedMemoryIsNotReadable)
 	LedDriver_TurnOn(8);
 	TEST_ASSERT_EQUAL_HEX16(0x80, virtualLeds);
 }
+
+TEST(LedDriver, UpperAndLowerBounds)
+{
+	LedDriver_TurnOn(1);
+	LedDriver_TurnOn(16);
+	TEST_ASSERT_EQUAL_HEX16(0x8001, virtualLeds);
+}
+
+TEST(LedDriver, OutOfBoundsTurnOnDoesNotHarm)
+{
+	LedDriver_TurnOn(-1);
+	LedDriver_TurnOn(0);
+	LedDriver_TurnOn(17);
+	LedDriver_TurnOn(3141);
+	TEST_ASSERT_EQUAL_HEX16(0, virtualLeds);
+}
+
+TEST(LedDriver, OutOfBoundsTurnOffDoesNotHarm)
+{
+	LedDriver_TurnAllOn();
+	LedDriver_TurnOff(-1);
+	LedDriver_TurnOff(0);
+	LedDriver_TurnOff(17);
+	LedDriver_TurnOff(3141);
+	TEST_ASSERT_EQUAL_HEX16(0xffff, virtualLeds);
+}
