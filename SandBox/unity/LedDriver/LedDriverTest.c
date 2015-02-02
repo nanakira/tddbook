@@ -41,5 +41,5 @@ TEST_TEAR_DOWN(LedDriver)
 
 TEST(LedDriver, StartHere)
 {
-/*    TEST_FAIL_MESSAGE("Start here"); */
+    TEST_FAIL_MESSAGE("Start here");
 }
