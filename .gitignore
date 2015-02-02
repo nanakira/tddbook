@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# For Sublime Text
+.tags
+.tags_sorted_by_file
+*.sublime-project
+*.sublime-workspace
