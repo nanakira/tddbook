@@ -26,9 +26,10 @@
 
 #include "LedDriver.h"
 #include <stdlib.h>
+#include <stdint.h>
 #include <memory.h>
 
-void LedDriver_Create(void)
+void LedDriver_Create(uint16_t* address)
 {
 }
 
