@@ -38,6 +38,6 @@ TEST_GROUP(LedDriver)
 
 TEST(LedDriver, Create)
 {
-//  FAIL("Start here");
+    FAIL("Start here");
 }
 
