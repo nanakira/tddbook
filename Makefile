@@ -5,6 +5,9 @@
 all: everything
 clean: cleaneverything
 
+codeCppUTest:
+	make -i -f MakefileCppUTest.mk
+
 codeUnity:
 	make -i -f MakefileUnity.mk
 
