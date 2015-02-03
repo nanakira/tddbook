@@ -27,7 +27,7 @@
 #include "unity_fixture.h"
 
 
-#if 0 
+#if 1
 static void RunAllTests(void)
 {
     RUN_TEST_GROUP(LedDriver);
@@ -41,6 +41,7 @@ static void RunAllTests(void)
 }
 #endif 
 
+#if 0
 static void RunAllTests(void)
 {
     /*    RUN_TEST_GROUP(unity); */
@@ -54,7 +55,7 @@ static void RunAllTests(void)
     RUN_TEST_GROUP(LightScheduler);
     RUN_TEST_GROUP(LightSchedulerInitAndCleanup);
 }
-
+#endif
 
 int main(int argc, char * argv[])
 {
