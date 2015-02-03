@@ -44,8 +44,8 @@ TEST_GROUP_RUNNER(LedDriver)
     RUN_TEST_CASE(LedDriver, IsOn);
     RUN_TEST_CASE(LedDriver, IsOff);
     RUN_TEST_CASE(LedDriver, OutOfBoundsLedsAreAlwaysOff);
-    // RUN_TEST_CASE(LedDriver, AllOn);
-    // RUN_TEST_CASE(LedDriver, AllOff);
+    RUN_TEST_CASE(LedDriver, AllOn);
+    RUN_TEST_CASE(LedDriver, AllOff);
 }
 #endif 
 
